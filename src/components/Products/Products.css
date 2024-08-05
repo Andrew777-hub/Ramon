@@ -1,0 +1,101 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 10px; /* Додаємо відступи по боках */
+}
+
+.product-block {
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  margin: 40px 0px 0px 0px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-block img {
+  width: 100%;
+  height: 200px; /* Встановлюємо фіксовану висоту для зображень */
+  object-fit: contain; /* Адаптуємо зображення під блок без обрізання */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.product-block:hover {
+  transform: scale(1.01);
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  text-align: left; /* Вирівнюємо текст ліворуч */
+}
+
+.product-block .product-price {
+  font-size: 1rem;
+  color: #020202;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.product-block button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 80%;
+  border-radius: 50px;
+  margin: 10px auto 0; /* Центруємо кнопку по горизонталі з верхнім відступом */
+  display: block;
+}
+
+.product-block button:hover {
+  background-color: #333;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px 10px;
+  }
+
+  .product-block {
+    padding: 8px;
+  }
+
+  .product-block img {
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .product-name {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .product-price {
+    font-size: 0.9rem;
+  }
+
+  .product-block button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

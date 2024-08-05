@@ -1,0 +1,125 @@
+.assortment {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding-top: 50px;
+  }
+  
+   
+  .block {
+    width: 45%;
+    margin: 10px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #e6e6e6; 
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block.furniture {
+    width: 45%;
+    margin: 10px;
+    height: 265px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #e6e6e6;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .block img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease-out;
+  }
+  
+  .block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 2;
+    transition: background 0.3s ease-out;
+  }
+  
+  .block p {
+    position: absolute;
+    z-index: 3;
+    color: #ffffff; 
+    padding: 10px 20px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+  }
+  
+  
+  .block:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .block:hover img {
+    transform: scale(1.01); 
+  }
+  
+  .block:hover::before {
+    background: rgba(0, 0, 0, 0); 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .assortment {
+      padding-top: 20px; 
+    }
+  
+    .block {
+      width: 90%; 
+      margin: 10px auto; 
+      height: 200px; 
+    }
+
+    .block.furniture {
+      width: 80%;
+      margin: 10px;
+      height: 170px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      background-color: #e6e6e6;
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .block p {
+      font-size: 18px; 
+    }
+  
+    .block img {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
+  }

@@ -5,6 +5,7 @@
 
 .filter-container {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .checkbox-wrapper {
@@ -60,8 +61,10 @@
   background-color: #f9f9f9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  position: fixed;
+  z-index: 1000;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 15px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
@@ -70,7 +73,7 @@
 
 .filter-dropdown.open {
   max-height: 400px;
-  width: 33%;
+  width: 20%;
   opacity: 1;
 }
 
@@ -122,7 +125,7 @@
 
 .series-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 5px 20px;
   font-size: 24px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -206,6 +209,7 @@
     justify-content: center;
     width: 100%;
   }
+  
 
   .filter-dropdown.open {
     max-height: 300px;
@@ -237,21 +241,32 @@
   .series-block {
     width: 100%;
     height: auto;
-    margin: 5px 0;
+    margin: 0px;
   }
 }
-
-
  
   @media (max-width: 768px) {
     .filter-button {
       justify-content: center;
       width: 100%;
     }
+    .filter-dropdown {
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      position: relative;
+      z-index: 1000;
+      border-radius: 5px;
+      margin-top: 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      opacity: 0;
+    }
   
     .filter-dropdown.open {
       max-height: 400px;
-      width: 100%;
+      width: auto;
       opacity: 1;
     }
   

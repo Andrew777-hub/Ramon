@@ -43,20 +43,6 @@ const ProductDetails = () => {
   
     console.log('Sending order data:', orderData); // Перевірте дані перед відправленням
   
-    fetch('https://s6.apix-drive.com/web-hooks/23718/2o2gpzt4', { 
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(orderData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Response from server:', data); // Перевірте відповідь від сервера
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
   };
 
   if (!product) {

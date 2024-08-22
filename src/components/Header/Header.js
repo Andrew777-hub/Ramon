@@ -90,7 +90,7 @@ export default function Header() {
           </ul>
           <div className="language-container" ref={dropdownRef}>
             <button className="language-toggle" onClick={toggleDropdown}>
-              <div className="language-text">{selectedLanguage === 'ua' ? 'UA' : 'RU'}</div>
+              <div className="language-text">{selectedLanguage === 'ua' ? 'UA' : 'ENG'}</div>
               <img
                 src={logo2}
                 alt="Змінити мову"
@@ -100,7 +100,7 @@ export default function Header() {
             {dropdownOpen && (
               <ul className="language-dropdown">
                 <li onClick={() => selectLanguage('ua')}>UA</li>
-                <li onClick={() => selectLanguage('ru')}>RU</li>
+                <li onClick={() => selectLanguage('en')}>ENG</li>
               </ul>
             )}
           </div>

@@ -12,9 +12,21 @@
 
 .carousel-block {
   flex: 1;
+  position: relative;
   max-width: 600px;
   min-width: 300px;
+  margin: auto; /* Центрування блоку каруселі */
+  overflow: hidden;
+  touch-action: pan-y;
 }
+
+.carousel .carousel-slider {
+  position: relative;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
 
 .carousel .slide {
   background: none;
@@ -23,18 +35,75 @@
 
 .carousel .thumbs-wrapper {
   margin-top: 10px;
-  max-width: 70%;
+  max-width: 100%;
+  margin: 0 auto; /* Центрування мініатюр */
 }
 
+
 .carousel .thumb {
-  border-radius: 3px;
+  border-radius: 4px; /* Легке закруглення */
+  border: 2px solid transparent; /* Приховування рамки за замовчуванням */
+  margin: 0 5px; /* Відступи між мініатюрами */
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; /* Запобігання виходу рамки за межі зображення */
+}
+
+.carousel .thumb.selected {
+  border-color: #ccc; /* Світло-сіра рамка для вибраної мініатюри */
+}
+
+.carousel .thumb img {
+  border-radius: 4px; /* Закруглення для зображень */
+  max-width: 100%;
+  height: auto;
 }
 
 .main-image {
-  border-radius: 10px;
+  object-fit: cover;
+  border-radius: 4px;
   width: 100%;
   height: auto;
+  display: block; /* Запобігання виходу зображення за межі */
 }
+
+.carousel .control-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.carousel .control-dots .dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel .control-dots .dot.selected {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.carousel .slider-wrapper {
+  position: relative;
+  padding-bottom: 30px;
+  max-width: 100%; /* Збереження зображень у межах контейнера */
+  overflow: hidden; /* Запобігання виходу елементів за межі слайдера */
+}
+
+
+
+
+
+
+
 
 .product-info {
   flex: 1;

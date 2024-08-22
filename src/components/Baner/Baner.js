@@ -8,12 +8,10 @@ export default function Baner() {
 
   return (
     <div className="baner">
-      <img src={logo1} alt="Baner" />
+      <img src={logo1} alt="Baner" className="baner-img" />
       <div className="baner-text">
         {t('banerText')}
       </div>
     </div>
   );
 }
-
-

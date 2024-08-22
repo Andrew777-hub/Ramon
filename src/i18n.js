@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import uaTranslations from './locales/ua.json';
-import ruTranslations from './locales/ru.json';
+import engTranslations from './locales/eng.json';
 
 i18n
   .use(initReactI18next)
@@ -10,12 +10,12 @@ i18n
       ua: {
         translation: uaTranslations,
       },
-      ru: {
-        translation: ruTranslations,
+      en: { // Updated this key to 'en' for English
+        translation: engTranslations,
       },
     },
-    lng: 'ua',
-    fallbackLng: 'ua',
+    lng: 'ua', // Default language
+    fallbackLng: 'ua', // Fallback language
     interpolation: {
       escapeValue: false,
     },

@@ -11,6 +11,9 @@
   font-size: 2rem;
   overflow: hidden;
 }
+.baner-img {
+  width: 100%;
+}
 
 .baner::before {
   content: "";
@@ -41,17 +44,24 @@
   .baner-text {
     font-size: 3.5vw;
   }
+  
 }
 
 @media screen and (max-width: 992px) {
   .baner-text {
     font-size: 3vw;
   }
+  
 }
 
 @media screen and (max-width: 768px) {
   .baner-text {
     font-size: 2.5vw;
+  }
+  .baner-img {
+    width: 300%;
+    object-position: left; 
+    transform: translateX(-66.67%);
   }
 }
 

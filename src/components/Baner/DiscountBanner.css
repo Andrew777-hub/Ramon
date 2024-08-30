@@ -1,0 +1,71 @@
+.discount-banner {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.568);
+  color: #fff;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  padding: 5px 20px 5px 10px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: shadowMovement 4s infinite linear;
+}
+
+.discount-banner.show {
+  opacity: 1;
+}
+
+.content {
+  text-align: center;
+}
+
+.content p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.highlight {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+@media (max-width: 767px) {
+  .discount-banner {
+    padding: 5px 5px 5px 20px;
+    animation: shadowMovement 4s infinite linear;
+  }
+
+  .content p {
+    font-size: 12px;
+    padding: 5px 40px 5px 5px;
+  }
+
+  .highlight {
+    font-size: 16px;
+  }
+}
+
+@keyframes shadowMovement {
+  0% {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 4px 0 8px rgba(255, 255, 255, 0.5);
+  }
+  75% {
+    box-shadow: 0 -4px 8px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  }
+}

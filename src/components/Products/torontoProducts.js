@@ -55,7 +55,10 @@ import shafa2 from './imgT/shafy/shafa2.jpg';
 import shafa3 from './imgT/shafy/shafa3.jpg';
 import shafa4 from './imgT/shafy/shafa4.jpg';
 import shafa5 from './imgT/shafy/shafa5.jpg';
+import shafa6 from './imgT/shafy/shafa6.jpg';
 
+import shafa7 from './imgT/shafy/shafa7.jpg';
+import shafa8 from './imgT/shafy/shafa8.jpg';
 // #endregion
 
 import './Products.css';
@@ -64,12 +67,10 @@ const torontoProducts = [
   {
     id: 19,
     name: 'Тумба приліжкова "Торонто"',
-    price: '7 050 - 7 230₴',
     img: tumba1,
     additionalImages: [tumba2, tumba3, tumba4, tumba5, tumba6, tumba7, tumba8, tumba9, tumba10, tumba11, tumba12, tumba13, tumba14, tumba15],
     category: 'Приліжкові тумби',
     categoryRu: 'Nightstands',
-    description: 'This is a unique description for Toronto Product 1.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -81,12 +82,10 @@ const torontoProducts = [
   {
     id: 20,
     name: 'Комод "Торонто"',
-    price: '13 610 - 14 140₴',
     img: komod1,
     additionalImages: [komod2, komod3, komod4, komod5, komod6, komod7, komod8, komod9, komod10, komod11],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Toronto Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -98,12 +97,10 @@ const torontoProducts = [
   {
     id: 24,
     name: 'Тумба ТВ "Торонто" (закрита)',
-    price: '11 580 - 12 010₴',
     img: tvTumba1,
     additionalImages: [tvTumba2, tvTumba3],
     category: 'ТВ тумби',
     categoryRu: 'TV Stands',
-    description: 'This is a unique description for Toronto Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -115,12 +112,10 @@ const torontoProducts = [
   {
     id: 25,
     name: 'Столик туалетний "Торонто"',
-    price: '10 880 - 11 100₴',
     img: tTable1,
     additionalImages: [tTable2, tTable3, tTable4, tTable5],
     category: 'Туалетні столики',
     categoryRu: 'Vanity Tables',
-    description: 'This is a unique description for Toronto Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -132,12 +127,10 @@ const torontoProducts = [
   {
     id: 26,
     name: 'Консоль "Торонто"',
-    price: '6 190₴',
     img: console1,
     additionalImages: [console2, console3],
     category: 'Туалетні столики',
     categoryRu: 'Vanity Tables',
-    description: 'This is a unique description for Toronto Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -150,12 +143,10 @@ const torontoProducts = [
   {
     id: 21,
     name: 'Шафа 2-дв "Торонто"',
-    price: '14 320 - 15 320₴',
-    img: tumba1,
-    additionalImages: [tumba2, tumba3],
+    img: shafa7,
+    additionalImages: [shafa8],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
-    description: 'This is a unique description for Toronto Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -168,12 +159,10 @@ const torontoProducts = [
   {
     id: 22,
     name: 'Шафа 3-дв "Торонто"',
-    price: '19 170 - 21 200₴',
     img: shafa1,
-    additionalImages: [shafa2, shafa3, shafa4, shafa5],
+    additionalImages: [shafa2, shafa3, shafa4, shafa5, shafa6],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
-    description: 'This is a unique description for Toronto Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',

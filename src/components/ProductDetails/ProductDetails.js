@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import BasketModal from '../BasketModal/BasketModal';
 import products from '../Products/Products';
 import bristolProducts from '../Products/bristolProducts';
 import torontoProducts from '../Products/torontoProducts';
 import kelnProducts from '../Products/kelnProducts';
 import kelnOnLegsProducts from '../Products/kelnOnLegsProducts';
-import OrderModal from '../OrderModal/OrderModal';
+import { BasketContext } from '../../context/BasketContext';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
   const { productId } = useParams();
+  const { cart, addToCart } = useContext(BasketContext);
+  const [isBasketModalOpen, setBasketModalOpen] = React.useState(false);
 
   const allProducts = [
     ...products,
@@ -24,48 +27,21 @@ const ProductDetails = () => {
   ];
 
   const product = allProducts.find((p) => p.id === parseInt(productId));
-  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
 
-  const openOrderModal = () => {
-    setIsOrderModalOpen(true);
-  };
-
-  const closeOrderModal = () => {
-    setIsOrderModalOpen(false);
-  };
-
-  const handleOrderSubmit = ({ fullName, phoneNumber, productName }) => {
-    const orderData = {
-      fullName,
-      phoneNumber,
-      product: productName,
-    };
-
-    console.log('Sending order data:', orderData);
-  };
-
-  useEffect(() => {
-    const carouselElement = document.querySelector('.carousel-block');
-    
-    const preventVerticalScroll = (e) => {
-      if (e.deltaY !== 0) {
-        e.preventDefault();
-      }
-    };
-
-    if (carouselElement) {
-      carouselElement.addEventListener('wheel', preventVerticalScroll);
-
-      return () => {
-        carouselElement.removeEventListener('wheel', preventVerticalScroll);
-      };
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
     }
-  }, []);
+  };
+
+  const closeBasketModal = () => {
+    setBasketModalOpen(false);
+  };
 
   if (!product) {
     return (
       <div>
-        <Header />
+        <Header onOpenBasket={() => setBasketModalOpen(true)} />
         <h1>Продукт не знайдено</h1>
         <Footer />
       </div>
@@ -79,40 +55,33 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <Header />
+      <Header onOpenBasket={() => setBasketModalOpen(true)} />
       <div className="product-details">
         <div className="product-main-info">
           <div className="carousel-block">
-          <Carousel 
-                showThumbs={true}
-                infiniteLoop 
-                useKeyboardArrows
-                transitionTime={200} 
-                //interval={3000}      
-                //autoPlay              
-              >
-                {carouselImages.map((image, index) => (
-                  <div key={index}>
-                    <img className="main-image" src={image} alt={product.name} />
-                  </div>
-                ))}
-          </Carousel>
-
+            <Carousel 
+              showThumbs={true}
+              infiniteLoop 
+              useKeyboardArrows
+              transitionTime={200}
+            >
+              {carouselImages.map((image, index) => (
+                <div key={index}>
+                  <img className="main-image" src={image} alt={product.name} />
+                </div>
+              ))}
+            </Carousel>
           </div>
           <div className="product-info">
             <h1 className="product-title">{product.name}</h1>
             <div className="product-options">
               <p className="product-price">{product.price}</p>
-              <button className="order-button" onClick={openOrderModal}>
-                Замовити
+              <button 
+                className="order-button" 
+                onClick={handleAddToCart}
+              >
+                Додати в кошик
               </button>
-              {isOrderModalOpen && (
-                <OrderModal
-                  closeModal={closeOrderModal}
-                  handleSubmit={handleOrderSubmit}
-                  productName={product.name}
-                />
-              )}
             </div>
             <div className="product-features">
               <h2>Характеристики</h2>
@@ -124,6 +93,14 @@ const ProductDetails = () => {
         </div>
       </div>
       <Footer />
+      <BasketModal
+        isOpen={isBasketModalOpen}
+        onClose={closeBasketModal}
+        cartItems={cart.reduce((acc, item) => {
+          acc[item.name] = (acc[item.name] || 0) + item.quantity;
+          return acc;
+        }, {})}
+      />
     </div>
   );
 };

@@ -122,7 +122,6 @@
   }
 }
 
-/* Медіа-запити для мобільних пристроїв */
 @media (max-width: 768px) {
   .success-message {
     width: 80%;

@@ -24,12 +24,10 @@ const kelnOnLegsProducts = [
   {
     id: 39,
     name: 'Тумба приліжкова "Кельн" (високі ніжки)',
-    price: '5 090 - 5 200₴',
     img: tumba1,
     additionalImages: [tumba2, tumba3, tumba4, tumba5, tumba6, tumba7, tumba8],
     category: 'Приліжкові тумби',
     categoryRu: 'Nightstands',
-    description: 'This is a unique description for Keln On Legs Product 1.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -40,12 +38,10 @@ const kelnOnLegsProducts = [
   {
     id: 40,
     name: 'Комод "Кельн" (високі ніжки)',
-    price: '11 260 - 11 540₴',
     img: komod1,
     additionalImages: [komod2, komod3, komod4, komod5, komod6],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Keln On Legs Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',

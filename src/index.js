@@ -5,12 +5,15 @@ import './index.css';
 import router from './routes';
 import ScrollToTop from './ScrollToTop';
 import './i18n'; 
+import { BasketProvider } from './context/BasketContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <ScrollToTop />
-    </RouterProvider>
+    <BasketProvider>
+      <RouterProvider router={router}>
+        <ScrollToTop />
+      </RouterProvider>
+    </BasketProvider>
   </React.StrictMode>
 );

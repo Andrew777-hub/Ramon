@@ -4,6 +4,7 @@
     "reviews": "Відгуки",
     "findUs": "Де нас знайти?",
     "faq": "Найчастіші запитання",
+    "discountMessage": "При замовленні меблів на сайті Ви гарантовано отримаєте знижку <span class='highlight'>-5%</span> на перше замовлення!",
     "banerText": "RAMON - ЦЕ ПРЕМІАЛЬНІ КОЛЕКЦІЇ МЕБЛІВ ДЛЯ СПАЛЕНЬ З М'ЯКИМИ ЛІЖКАМИ",
     "assortmentFurniture": "КОРПУСНІ МЕБЛІ",
     "assortmentBed": "ЛІЖКА",
@@ -43,6 +44,19 @@
     "readMore": "Детальніше",
     "yesterday": "Вчора",
     "daysAgo": "{{count}} днів тому",
+    "orderModalTitle": "Заявка на замовлення",
+    "fullNamePlaceholder": "Ваше ім'я",
+    "phoneNumberPlaceholder": "Ваш номер телефону",
+    "selectedItemsTitle": "Вибрані товари:",
+    "submitButton": "Відправити",
+    "successMessage": "Дякуємо, заявку надіслано! Наш менеджер зв'яжеться з Вами до 5 хвилин!",
+    "itemFormat": "{{name}} - {{quantity}} шт.",
+    "basketTitle": "Ваш кошик",
+    "emptyBasket": "Порожній",
+    "sendForCalculation": "Вiдправити заявку",
+    "quantityWithUnit": "{{count}} шт.",
+
+    
     
         "faqTitle": "НАЙЧАСТІШІ ЗАПИТАННЯ КЛІЄНТІВ (FAQ)",
         "faqData": [
@@ -73,6 +87,10 @@
         
         
       
+
+
+
+          
       
 }
 

@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './SuccessMessage.css';
 import doneImage from './img/done.png';
 
-const SuccessMessage = ({ message, onClose }) => {
+const SuccessMessage = ({ onClose }) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 3000); // 3 seconds
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [onClose]);
@@ -16,7 +19,7 @@ const SuccessMessage = ({ message, onClose }) => {
       <div className="overlay" onClick={onClose}></div>
       <div className="success-message">
         <img src={doneImage} alt="Success" className="success-image" />
-        <div className="success-text">{message}</div>
+        <div className="success-text">{t('successMessage')}</div> {}
       </div>
     </div>
   );

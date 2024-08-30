@@ -16,9 +16,31 @@ export default function Footer() {
         </div>
         <div className="footer-contacts">
           <h4>{t('footerContactsTitle')}</h4>
-          <p>{t('footerPhone')}</p>
-          <p>{t('footerAddress')}</p>
-          <p>{t('footerEmail')}</p>
+          <p>
+            <a
+              href="tel:+38 096 933 22 52"  // Заміни на фактичний номер телефону
+              rel="noopener noreferrer"
+            >
+              {t('footerPhone')}
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.google.com/maps/place/Ramon+meble/@49.5422525,25.5928368,15z/data=!4m6!3m5!1s0x4730377041637f2f:0x3abc2cac242317d4!8m2!3d49.5422525!4d25.5928368!16s%2Fg%2F11y5z6r557?entry=ttu&g_ep=EgoyMDI0MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t('footerAddress')}
+            </a>
+          </p>
+          <p>
+            <a
+              href="mailto:ramon.zakaz@gmail.com"  
+              rel="noopener noreferrer"
+            >
+              {t('footerEmail')}
+            </a>
+          </p>
         </div>
         <div className="footer-social">
           <h4>{t('footerSocialTitle')}</h4>

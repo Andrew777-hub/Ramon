@@ -38,7 +38,7 @@ const FeedbackModal = ({ closeModal }) => {
 
   const sendToTelegram = async (formData) => {
     const token = '6994036779:AAH2pYeGQm-eOYT7qaYfi2WLd0hxfTt4SYM';
-    const chatId = '889435386';
+    const chatId = '-4581124112';
     const message = `Ім'я: ${formData.fullName}\nТелефон: ${formData.phoneNumber}`;
 
     const url = `https://api.telegram.org/bot${token}/sendMessage`;

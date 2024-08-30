@@ -24,9 +24,14 @@ footer {
   height: auto;
 }
 
-.footer-contacts {
-  flex: 2;
-  text-align: center;
+.footer-contacts a {
+  color: #ffffff; /* Колір тексту посилання */
+  text-decoration: none; /* Прибрати підкреслення */
+  cursor: pointer; /* Додає курсор "pointer" */
+}
+
+.footer-contacts a:hover {
+  text-decoration: underline; /* Підкреслення при наведенні */
 }
 
 .footer-contacts h4, .footer-social h4 {
@@ -53,7 +58,7 @@ footer {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s;
-  padding: none;
+  cursor: pointer; /* Додає курсор "pointer" */
 }
 
 .footer-social img {
@@ -75,16 +80,16 @@ footer {
 
 @media (max-width: 768px) {
   .footer-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-logo, .footer-contacts, .footer-social {
-      margin: 10px 0;
-      text-align: center;
+    margin: 10px 0;
+    text-align: center;
   }
 
   .social-icons {
-      justify-content: center;
+    justify-content: center;
   }
 }

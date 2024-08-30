@@ -15,7 +15,7 @@
   position: relative;
   max-width: 600px;
   min-width: 300px;
-  margin: auto; /* Центрування блоку каруселі */
+  margin: auto; 
   overflow: hidden;
   touch-action: pan-y;
 }
@@ -36,24 +36,24 @@
 .carousel .thumbs-wrapper {
   margin-top: 10px;
   max-width: 100%;
-  margin: 0 auto; /* Центрування мініатюр */
+  margin: 0 auto;
 }
 
 
 .carousel .thumb {
-  border-radius: 4px; /* Легке закруглення */
-  border: 2px solid transparent; /* Приховування рамки за замовчуванням */
-  margin: 0 5px; /* Відступи між мініатюрами */
+  border-radius: 4px; 
+  border: 2px solid transparent; 
+  margin: 0 5px; 
   transition: border-color 0.3s ease;
-  box-sizing: border-box; /* Запобігання виходу рамки за межі зображення */
+  box-sizing: border-box; 
 }
 
 .carousel .thumb.selected {
-  border-color: #ccc; /* Світло-сіра рамка для вибраної мініатюри */
+  border-color: #ccc; 
 }
 
 .carousel .thumb img {
-  border-radius: 4px; /* Закруглення для зображень */
+  border-radius: 4px; 
   max-width: 100%;
   height: auto;
 }
@@ -63,7 +63,7 @@
   border-radius: 4px;
   width: 100%;
   height: auto;
-  display: block; /* Запобігання виходу зображення за межі */
+  display: block; 
 }
 
 .carousel .control-dots {
@@ -94,16 +94,9 @@
 .carousel .slider-wrapper {
   position: relative;
   padding-bottom: 30px;
-  max-width: 100%; /* Збереження зображень у межах контейнера */
-  overflow: hidden; /* Запобігання виходу елементів за межі слайдера */
+  max-width: 100%; 
+  overflow: hidden; 
 }
-
-
-
-
-
-
-
 
 .product-info {
   flex: 1;

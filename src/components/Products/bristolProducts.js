@@ -104,12 +104,10 @@ const bristolProducts = [
   {
     id: 9,
     name: 'Приліжкова тумба "Брістоль"',
-    price: '6 630 - 6 790₴',
     img: tumba1,
     additionalImages: [tumba2, tumba3, tumba4, tumba5, tumba6, tumba7, tumba8, tumba9, tumba10, tumba11, tumba12, tumba13],
     category: 'Приліжкові тумби',
     categoryRu: 'Nightstands',
-    description: 'This is a unique description for Bristol Product 1.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -121,12 +119,10 @@ const bristolProducts = [
   {
     id: 18,
     name: 'Комод 2-дв з 2 шухлядами "Брістоль"',
-    price: '12 500 - 12 990₴',
     img: komod1,
     additionalImages: [komod2, komod3, komod4, komod5, komod6, komod7, komod8, komod9, komod10],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Bristol Product 4.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -138,12 +134,10 @@ const bristolProducts = [
   {
     id: 10,
     name: 'Комод 1-дв з 3 шухлядами "Брістоль"',
-    price: '13 570 - 14 010₴',
     img: komod25,
     additionalImages: [komod26, komod27],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Bristol Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -155,12 +149,10 @@ const bristolProducts = [
   {
     id: 17,
     name: 'Комод 2-дв з 3 шухлядами "Брістоль"',
-    price: '17 030₴',
     img: komod11,
     additionalImages: [komod12, komod13, komod14, komod15, komod16, komod17],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Bristol Product 4.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -173,12 +165,10 @@ const bristolProducts = [
   {
     id: 14,
     name: 'Комод 4-дв "Брістоль"',
-    price: '14 600₴',
     img: komod18,
     additionalImages: [komod19, komod20, komod21, komod22, komod23],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Bristol Product 4.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -190,12 +180,10 @@ const bristolProducts = [
   {
     id: 11,
     name: 'Столик туалетний "Брістоль"',
-    price: '9 450 - 9 610₴',
     img: tTable1,
     additionalImages: [tTable2, tTable3, tTable4, tTable5, tTable6, tTable7, tTable8, tTable9, tTable10, tTable11],
     category: 'Туалетні столики',
     categoryRu: 'Vanity Tables',
-    description: 'This is a unique description for Bristol Product 3.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -207,12 +195,10 @@ const bristolProducts = [
   {
     id: 12,
     name: 'Столик журнальний "Брістоль"',
-    price: '9 600 - 9 910₴',
     img: jTable1,
     additionalImages: [jTable2, jTable3, jTable4, jTable5, jTable6, jTable7, jTable8, jTable9, jTable10, jTable11],
     category: 'Журнальні столики',
     categoryRu: 'Coffee Tables',
-    description: 'This is a unique description for Bristol Product 4.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -224,12 +210,10 @@ const bristolProducts = [
   {
     id: 13,
     name: 'Тумба ТВ "Брістоль"',
-    price: '13 170 - 13 570₴',
     img: tvTumba1,
     additionalImages: [tvTumba2, tvTumba3, tvTumba4, tvTumba5, tvTumba6, tvTumba7],
     category: 'ТВ тумби',
     categoryRu: 'TV Stands',
-    description: 'This is a unique description for Bristol Product 4.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -241,12 +225,10 @@ const bristolProducts = [
   {
     id: 15,
     name: 'Шафа 2-дв "Брістоль"',
-    price: '23 390 - 24 850₴',
     img: shafa5,
     additionalImages: [shafa6],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
-    description: 'This is a unique description for Bristol Product 4.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -259,12 +241,10 @@ const bristolProducts = [
   {
     id: 16,
     name: 'Шафа 3-дв "Брістоль"',
-    price: '24 200 - 25 560₴',
     img: shafa1,
     additionalImages: [shafa2, shafa3, shafa4],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
-    description: 'This is a unique description for Bristol Product 4.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',

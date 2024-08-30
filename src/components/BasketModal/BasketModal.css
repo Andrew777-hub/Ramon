@@ -1,0 +1,120 @@
+.basket-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+.basket-modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+@media (max-width: 768px) {
+    .basket-modal-content {
+      max-width: 80%;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #ff7b00;
+}
+
+.basket-modal-content h2 {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.basket-modal-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.basket-modal-content li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+}
+
+.basket-modal-content li:last-child {
+    border-bottom: none;
+}
+
+.basket-item-name {
+    font-size: 16px;
+    color: #555;
+}
+
+.basket-item-quantity {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.basket-item-quantity button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px; 
+    margin: 0 2px; 
+    transition: background-color 0.3s ease;
+}
+
+.basket-item-quantity button:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.basket-item-quantity img {
+    width: 10px; 
+    height: 10px; 
+}
+
+.send-for-calculation-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.send-for-calculation-button:hover {
+    background-color: #3f3f3f;
+}

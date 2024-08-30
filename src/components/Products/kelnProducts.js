@@ -41,18 +41,28 @@ import console2 from './imgK/toiletTable/console2.jpg';
 import console3 from './imgK/toiletTable/console3.jpg';
 // #endregion
 
+// #region Shafy
+import shafa1 from './imgK/shafy/shafa1.jpg';
+import shafa2 from './imgK/shafy/shafa2.jpg';
+import shafa3 from './imgK/shafy/shafa3.jpg';
+
+import shafa4 from './imgK/shafy/shafa4.jpg';
+import shafa5 from './imgK/shafy/shafa5.jpg';
+
+import shafa6 from './imgK/shafy/shafa6.jpg';
+import shafa7 from './imgK/shafy/shafa7.jpg';
+// #endregion
+
 import './Products.css';
 
 const kelnProducts = [
   {
     id: 30,
     name: 'Тумба приліжкова "Кельн"',
-    price: '5 100 - 5 340₴',
     img: tumba1,
     additionalImages: [tumba2, tumba3, tumba4, tumba5, tumba6, tumba7, tumba8, tumba9, tumba10, tumba11, tumba12, tumba13],
     category: 'Приліжкові тумби',
     categoryRu: 'Nightstands',
-    description: 'This is a unique description for Keln Product 1.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -63,12 +73,10 @@ const kelnProducts = [
   {
     id: 31,
     name: 'Комод "Кельн"',
-    price: '10 260 - 10 820₴',
     img: komod1,
     additionalImages: [komod2, komod3, komod4, komod5, komod6, komod7],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Keln Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -80,12 +88,10 @@ const kelnProducts = [
   {
     id: 35,
     name: 'Комод високий "Кельн"',
-    price: '13 520 - 13 820₴',
     img: komod8,
     additionalImages: [komod9, komod10, komod11, komod12],
     category: 'Комоди',
     categoryRu: 'Dressers',
-    description: 'This is a unique description for Keln Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -96,12 +102,10 @@ const kelnProducts = [
   {
     id: 36,
     name: 'Столик туалетний "Кельн"',
-    price: '9 230 - 9 500₴',
     img: tTable1,
     additionalImages: [tTable2, tTable3, tTable4, tTable5],
     category: 'Туалетні столики',
     categoryRu: 'Vanity Tables',
-    description: 'This is a unique description for Keln Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -112,12 +116,10 @@ const kelnProducts = [
   {
     id: 37,
     name: 'Консоль "Кельн"',
-    price: '5 670₴',
     img: console1,
     additionalImages: [console2, console3],
     category: 'Туалетні столики',
     categoryRu: 'Vanity Tables',
-    description: 'This is a unique description for Keln Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -129,12 +131,10 @@ const kelnProducts = [
   {
     id: 32,
     name: 'Шафа 2-дв "Кельн"',
-    price: '13 640 - 14 610₴',
-    img: tumba3,
-    additionalImages: [tumba2, tumba3],
+    img: shafa6,
+    additionalImages: [shafa7],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
-    description: 'This is a unique description for Keln Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -145,12 +145,10 @@ const kelnProducts = [
   {
     id: 33,
     name: 'Шафа 3-дв "Кельн"',
-    price: '17 570 - 18 870₴',
-    img: tumba4,
-    additionalImages: [tumba2, tumba3],
+    img: shafa1,
+    additionalImages: [shafa2, shafa3],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
-    description: 'This is a unique description for Keln Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',
@@ -161,12 +159,10 @@ const kelnProducts = [
   {
     id: 34,
     name: 'Шафа 4-дв "Кельн"',
-    price: '23 190 - 24 970₴',
-    img: tumba5,
-    additionalImages: [tumba2, tumba3],
+    img: shafa4,
+    additionalImages: [shafa5],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
-    description: 'This is a unique description for Keln Product 2.',
     features: [
       'Каркас: Метал',
       'Матеріал: ДСП вищої категорії',

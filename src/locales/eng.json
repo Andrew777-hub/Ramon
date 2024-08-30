@@ -4,6 +4,7 @@
   "reviews": "Reviews",
   "findUs": "Find Us",
   "faq": "Frequently Asked Questions",
+  "discountMessage": "By ordering furniture on the site, you will receive a guaranteed discount of <span class='highlight'>-5%</span> on your first order!",
   "banerText": "RAMON - PREMIUM BEDROOM FURNITURE COLLECTIONS WITH SOFT BEDS",
   "assortmentFurniture": "CABINET FURNITURE",
   "assortmentBed": "BEDS",
@@ -44,6 +45,19 @@
   "readMore": "Read More",
   "yesterday": "Yesterday",
   "daysAgo": "{{count}} days ago",
+  "orderModalTitle": "Order Request",
+  "fullNamePlaceholder": "Your Name",
+  "phoneNumberPlaceholder": "Your Phone Number",
+  "selectedItemsTitle": "Selected Items:",
+  "submitButton": "Submit",
+  "successMessage": "Thank you, your request has been sent! Our manager will contact you within 5 minutes!",
+  "itemFormat": "{{name}} - {{quantity}} pcs.",
+  "basketTitle": "Your cart",
+  "emptyBasket": "Empty",
+  "sendForCalculation": "Send a request",
+  "quantityWithUnit": "{{count}} pcs.",
+
+  
   
   "faqTitle": "FREQUENTLY ASKED QUESTIONS (FAQ)",
   "faqData": [
@@ -71,4 +85,12 @@
   "footerEmail": "Email: ramon.zakaz@gmail.com",
   "footerSocialTitle": "We are on Social Media",
   "footerRights": "All Rights Reserved"
+
+
+
+
+
+
+
+  
 }

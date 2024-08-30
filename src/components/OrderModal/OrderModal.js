@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; 
+import { BasketContext } from '../../context/BasketContext';
 import './OrderModal.css';
 import SuccessMessage from '../SuccessMessage/SuccessMessage';
 
-const OrderModal = ({ closeModal, handleSubmit, productName }) => {
+const OrderModal = ({ closeModal, cartItems, closeBasketModal }) => {
+  const { t } = useTranslation(); 
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const navigate = useNavigate();
+  const { clearCart } = useContext(BasketContext);
 
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -15,7 +21,11 @@ const OrderModal = ({ closeModal, handleSubmit, productName }) => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    const formData = { fullName, phoneNumber, productName };
+    const formData = {
+      fullName,
+      phoneNumber,
+      products: cartItems.map(item => `${item.name} (${item.quantity} шт.)`).join(', ')
+    };
 
     try {
       await sendToTelegram(formData);
@@ -23,6 +33,12 @@ const OrderModal = ({ closeModal, handleSubmit, productName }) => {
 
       setTimeout(() => {
         closeModal();
+        clearCart();
+        if (closeBasketModal) {
+          closeBasketModal();
+        }
+        navigate('/');
+        window.scrollTo(0, 0);
       }, 3000);
     } catch (error) {
       console.error('Error:', error);
@@ -31,8 +47,8 @@ const OrderModal = ({ closeModal, handleSubmit, productName }) => {
 
   const sendToTelegram = async (formData) => {
     const token = '6994036779:AAH2pYeGQm-eOYT7qaYfi2WLd0hxfTt4SYM';
-    const chatId = '889435386';
-    const message = `Ім'я: ${formData.fullName}\nТелефон: ${formData.phoneNumber}\nТовар: ${formData.productName}`;
+    const chatId = '-4581124112';
+    const message = `Ім'я: ${formData.fullName}\nТелефон: ${formData.phoneNumber}\nТовари: ${formData.products}`;
 
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
     const params = {
@@ -49,16 +65,12 @@ const OrderModal = ({ closeModal, handleSubmit, productName }) => {
     });
   };
 
-  const closeSuccessMessage = () => {
-    setShowSuccessMessage(false);
-  };
-
   return (
     <>
       {showSuccessMessage && (
-        <SuccessMessage 
-          message="Дякуємо, заявку надіслано! Наш менеджер зв'яжеться з Вами до 5 хвилин!" 
-          onClose={closeSuccessMessage} 
+        <SuccessMessage
+          message={t('successMessage')} 
+          onClose={() => setShowSuccessMessage(false)}
         />
       )}
       <div className="modal-overlay" onClick={handleOverlayClick}>
@@ -66,12 +78,12 @@ const OrderModal = ({ closeModal, handleSubmit, productName }) => {
           <button onClick={closeModal} className="close-button">
             ✕
           </button>
-          <h2>Заявка на замовлення</h2>
+          <h2>{t('orderModalTitle')}</h2> {}
           <form onSubmit={submitForm}>
             <label>
               <input
                 type="text"
-                placeholder="Ваше ім'я"
+                placeholder={t('fullNamePlaceholder')} 
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 required
@@ -80,14 +92,21 @@ const OrderModal = ({ closeModal, handleSubmit, productName }) => {
             <label>
               <input
                 type="tel"
-                placeholder="Ваш номер телефону"
+                placeholder={t('phoneNumberPlaceholder')} 
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 required
               />
             </label>
-            <p>Товар: {productName}</p>
-            <button type="submit">Відправити</button>
+            <h3>{t('selectedItemsTitle')}</h3> {}
+            <ul>
+              {cartItems.map((item, index) => (
+                <li key={index}>
+                  {t('itemFormat', { name: item.name, quantity: item.quantity })} {}
+                </li>
+              ))}
+            </ul>
+            <button type="submit">{t('submitButton')}</button> {}
           </form>
         </div>
       </div>

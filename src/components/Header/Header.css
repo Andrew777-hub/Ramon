@@ -91,44 +91,83 @@ body {
   header ul.nav li button:hover {
     opacity: 0.4;
   }
+
+  .header-content .basket-button,
+.header-content .language-container {
+  margin-left: 0px; 
+}
   
   
-  .language-toggle {
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .language-icon {
-    width: 22px;
-    height: 22px;
-    transition: transform 0.3s ease;
-  }
-  
-  .language-icon.rotated {
-    transform: rotate(90deg);
-  }
-  
-  .language-container {
-    position: relative;
-  }
-  
-  .language-dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #f8f8f8;
-    list-style: none;
-    padding: auto;
-    margin: 0px;
-    z-index: 10;
-    opacity: 0;
-    visibility: hidden;
-    animation: dropdown-fade-in 0.3s ease forwards;
-  }
+.basket-button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.basket-icon {
+  width: 24px; 
+  height: 24px; 
+}
+
+.basket-count {
+  position: absolute;
+  top: -10px; 
+  right: -10px; 
+  background-color: red; 
+  color: white;
+  border-radius: 50%;
+  width: 20px; 
+  height: 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px; 
+  font-weight: bold; 
+}
+
+.basket-button:hover .basket-icon {
+  opacity: 0.7;
+}
+
+.language-container {
+  display: flex;
+  align-items: center;
+}
+
+.language-toggle {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.language-icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.language-icon.rotated {
+  transform: rotate(90deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #f8f8f8;
+  list-style: none;
+  padding: 0;
+  margin: -4px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  animation: dropdown-fade-in 0.3s ease forwards;
+}
   
   @keyframes dropdown-fade-in {
     0% {
@@ -192,7 +231,7 @@ body {
     color: #333;
     border-radius: 0px;
     border-bottom: 0.5px solid #ccc;
-    font-weight: 600; /* Додана властивість для зменшення жирності */
+    font-weight: 600;
   }
   
   
@@ -237,9 +276,40 @@ body {
   .change:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
+
+ 
+  
   
   
   @media (max-width: 768px) {
+    .basket-button {
+      position: relative;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    
+    .basket-icon {
+      width: 24px;
+      height: 24px; 
+    }
+    
+    .basket-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      width: 17px;
+      height: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+    
     .header-content {
       justify-content: space-between;
       padding: 0 10px;

@@ -82,12 +82,10 @@ const products = [
   {
     id: 1,
     name: 'Ліжко L-041',
-    price: '18000-25000 грн',
     img: bed1,
     additionalImages: [bed2, bed3, bed4, bed5, bed6, bed7, bed8, bed9, bed10, bed11, bed12],
-    description: 'This is a unique description',
     features: [
-      'Розмiр: ',
+      'Розмiр: 1400 x 2000, 1600 x 2000, 1800 x 2000',
       'Каркас: Метал',
       'Підйомний механізм: Пневматично-газовий підйомник',
       'Тканина/Текстура: на вибір покупця'
@@ -96,13 +94,11 @@ const products = [
 
   {
     id: 2,
-    name: 'Ліжко L031',
-    price: '18000-25000 грн',
+    name: 'Ліжко L-031',
     img: curly1,
     additionalImages: [curly2, curly3, curly4, curly5, curly6, curly7, curly8, curly9, curly10, curly11, curly12, curly13, curly14],
-    description: 'This is a unique description for Product 2.',
     features: [
-      'Розмiр: ',
+      'Розмiр: 1400 x 2000, 1600 x 2000, 1800 x 2000',
       'Каркас: Метал',
       'Підйомний механізм: Пневматично-газовий підйомник',
       'Тканина/Текстура: на вибір покупця'
@@ -112,12 +108,10 @@ const products = [
   {
     id: 3,
     name: 'Ліжко "Люсі"',
-    price: '18000-25000 грн',
     img: lucy1,
     additionalImages: [lucy2, lucy3, lucy4, lucy5, lucy6, lucy7, lucy8, lucy9, lucy10, lucy11],
-    description: 'This is a unique description for Product 3.',
     features: [
-      'Розмiр: ',
+      'Розмiр: 1400 x 2000, 1600 x 2000, 1800 x 2000',
       'Каркас: Метал',
       'Підйомний механізм: Пневматично-газовий підйомник',
       'Тканина/Текстура: на вибір покупця'
@@ -127,12 +121,10 @@ const products = [
   {
     id: 4,
     name: 'Ліжко "Моніка"',
-    price: '18000-25000 грн',
     img: monica1,
     additionalImages: [monica2, monica3, monica4, monica5, monica6, monica7, monica8, monica9, monica10, monica11, monica12, monica13, monica14],
-    description: 'This is a unique description for Product 4.',
     features: [
-      'Розмiр: ',
+      'Розмiр: 1400 x 2000, 1600 x 2000, 1800 x 2000',
       'Каркас: Метал',
       'Підйомний механізм: Пневматично-газовий підйомник',
       'Тканина/Текстура: на вибір покупця'
@@ -141,13 +133,11 @@ const products = [
 
   {
     id: 5,
-    name: 'Ліжко L029',
-    price: '18000-25000 грн',
+    name: 'Ліжко L-029',
     img: beige1,
     additionalImages: [beige2, beige3, beige4, beige5, beige6, beige7, beige8, beige9, beige10, beige11, beige12],
-    description: 'This is a unique description for Product 5.',
     features: [
-      'Розмiр: ',
+      'Розмiр: 1400 x 2000, 1600 x 2000, 1800 x 2000',
       'Каркас: Метал',
       'Підйомний механізм: Пневматично-газовий підйомник',
       'Тканина/Текстура: на вибір покупця'

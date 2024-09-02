@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './Bed.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import products from '../Products/Products'; 
 
 const Bed = () => {
+  const { t } = useTranslation();
+  
   return (
     <div>
       <Header />
@@ -17,7 +20,7 @@ const Bed = () => {
                 <img src={product.img} alt={product.name} />
                 <div className="product-name">{product.name}</div>
                 <div className="product-price">{product.price}</div>
-                <button>Детальніше</button>
+                <button>{t('details')}</button> 
               </div>
             </Link>
           ))}

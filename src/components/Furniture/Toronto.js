@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import torontoProducts from '../Products/torontoProducts';
 
 const Toronto = () => {
+  const { t } = useTranslation();
+  
   return (
     <div>
       <Header />
@@ -15,7 +18,7 @@ const Toronto = () => {
               <img src={product.img} alt={product.name} />
               <div className="product-name">{product.name}</div>
               <div className="product-price">{product.price}</div>
-              <button>Детальніше</button>
+              <button>{t('details')}</button>
             </div>
           </Link>
         ))}
@@ -26,3 +29,4 @@ const Toronto = () => {
 };
 
 export default Toronto;
+

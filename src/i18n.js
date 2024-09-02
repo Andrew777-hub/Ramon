@@ -10,12 +10,12 @@ i18n
       ua: {
         translation: uaTranslations,
       },
-      en: { // Updated this key to 'en' for English
+      en: {
         translation: engTranslations,
       },
     },
-    lng: 'ua', // Default language
-    fallbackLng: 'ua', // Fallback language
+    lng: 'ua', 
+    fallbackLng: 'ua', 
     interpolation: {
       escapeValue: false,
     },

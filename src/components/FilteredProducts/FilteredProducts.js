@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
+
 const FilteredProducts = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const { filteredProducts } = location.state || {};
   
-
   return (
     <div>
       <Header />
@@ -19,12 +21,12 @@ const FilteredProducts = () => {
                 <img src={product.img} alt={product.name} />
                 <div className="product-name">{product.name}</div>
                 <div className="product-price">{product.price}</div>
-                <button>Детальніше</button>
+                <button>{t('details')}</button>
               </div>
             </Link>
           ))
         ) : (
-          <p>Немає результатів для відображення.</p>
+          <p>{t('noResults')}</p>
         )}
       </div>
       <Footer />

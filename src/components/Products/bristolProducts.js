@@ -95,7 +95,10 @@ import shafa4 from './imgB/shafy/shafa4.jpg';
 
 import shafa5 from './imgB/shafy/shafa5.jpg';
 import shafa6 from './imgB/shafy/shafa6.jpg';
-
+import shafa7 from './imgB/shafy/shafa7.jpg';
+import shafa8 from './imgB/shafy/shafa8.jpg';
+import shafa9 from './imgB/shafy/shafa9.jpg';
+import shafa10 from './imgB/shafy/shafa10.jpg';
 // #endregion
 
 import './Products.css';
@@ -226,7 +229,7 @@ const bristolProducts = [
     id: 15,
     name: 'Шафа 2-дв "Брістоль"',
     img: shafa5,
-    additionalImages: [shafa6],
+    additionalImages: [shafa6, shafa7, shafa8, shafa9, shafa10],
     category: 'Шафи',
     categoryRu: 'Wardrobes',
     features: [

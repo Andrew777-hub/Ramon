@@ -55,6 +55,10 @@
     "emptyBasket": "Порожній",
     "sendForCalculation": "Вiдправити заявку",
     "quantityWithUnit": "{{count}} шт.",
+    "addToCart": "Додати в кошик",
+    "features": "Характеристики",
+    "details": "Детальніше",
+    "noResults": "Немає результатів для відображення",
 
     
     

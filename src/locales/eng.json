@@ -56,7 +56,10 @@
   "emptyBasket": "Empty",
   "sendForCalculation": "Send a request",
   "quantityWithUnit": "{{count}} pcs.",
-
+  "addToCart": "Add to cart",
+  "features": "Features",
+  "details": "Details",
+  "noResults": "No results to display",
   
   
   "faqTitle": "FREQUENTLY ASKED QUESTIONS (FAQ)",

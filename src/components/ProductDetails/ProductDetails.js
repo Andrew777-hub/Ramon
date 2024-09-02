@@ -11,12 +11,14 @@ import torontoProducts from '../Products/torontoProducts';
 import kelnProducts from '../Products/kelnProducts';
 import kelnOnLegsProducts from '../Products/kelnOnLegsProducts';
 import { BasketContext } from '../../context/BasketContext';
+import { useTranslation } from 'react-i18next'; // імпорт useTranslation
 import './ProductDetails.css';
 
 const ProductDetails = () => {
   const { productId } = useParams();
   const { cart, addToCart } = useContext(BasketContext);
   const [isBasketModalOpen, setBasketModalOpen] = React.useState(false);
+  const { t } = useTranslation(); // використання useTranslation
 
   const allProducts = [
     ...products,
@@ -42,7 +44,7 @@ const ProductDetails = () => {
     return (
       <div>
         <Header onOpenBasket={() => setBasketModalOpen(true)} />
-        <h1>Продукт не знайдено</h1>
+        <h1>{t('productNotFound')}</h1> {/* Перекладений текст */}
         <Footer />
       </div>
     );
@@ -80,11 +82,11 @@ const ProductDetails = () => {
                 className="order-button" 
                 onClick={handleAddToCart}
               >
-                Додати в кошик
+                {t('addToCart')} {}
               </button>
             </div>
             <div className="product-features">
-              <h2>Характеристики</h2>
+              <h2>{t('features')}</h2> {}
               {product.features.map((feature, index) => (
                 <p key={index}>{feature}</p>
               ))}

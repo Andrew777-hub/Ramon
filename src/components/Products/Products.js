@@ -76,6 +76,7 @@ import beige11 from './img/L029/beige11.jpg';
 import beige12 from './img/L029/beige12.jpg';
 // #endregion
 
+
 import './Products.css';
 
 const products = [

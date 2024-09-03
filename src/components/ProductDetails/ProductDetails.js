@@ -10,15 +10,16 @@ import bristolProducts from '../Products/bristolProducts';
 import torontoProducts from '../Products/torontoProducts';
 import kelnProducts from '../Products/kelnProducts';
 import kelnOnLegsProducts from '../Products/kelnOnLegsProducts';
+import orleanProducts from '../Products/orleanProducts';
 import { BasketContext } from '../../context/BasketContext';
-import { useTranslation } from 'react-i18next'; // імпорт useTranslation
+import { useTranslation } from 'react-i18next';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
   const { productId } = useParams();
   const { cart, addToCart } = useContext(BasketContext);
   const [isBasketModalOpen, setBasketModalOpen] = React.useState(false);
-  const { t } = useTranslation(); // використання useTranslation
+  const { t } = useTranslation();
 
   const allProducts = [
     ...products,
@@ -26,6 +27,7 @@ const ProductDetails = () => {
     ...torontoProducts,
     ...kelnProducts,
     ...kelnOnLegsProducts,
+    ...orleanProducts,
   ];
 
   const product = allProducts.find((p) => p.id === parseInt(productId));
@@ -44,7 +46,7 @@ const ProductDetails = () => {
     return (
       <div>
         <Header onOpenBasket={() => setBasketModalOpen(true)} />
-        <h1>{t('productNotFound')}</h1> {/* Перекладений текст */}
+        <h1>{t('productNotFound')}</h1>
         <Footer />
       </div>
     );
@@ -82,11 +84,11 @@ const ProductDetails = () => {
                 className="order-button" 
                 onClick={handleAddToCart}
               >
-                {t('addToCart')} {}
+                {t('addToCart')}
               </button>
             </div>
             <div className="product-features">
-              <h2>{t('features')}</h2> {}
+              <h2>{t('features')}</h2>
               {product.features.map((feature, index) => (
                 <p key={index}>{feature}</p>
               ))}

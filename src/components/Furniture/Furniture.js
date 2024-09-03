@@ -10,6 +10,7 @@ import BristolImage from './img/bristol.jpg';
 import TorontoImage from './img/toronto.jpg';
 import KelnImage from './img/keln.jpg';
 import KelnOnLegsImage from './img/kelnOnLegs.jpg';
+import OrleanImage from './img/orlean.jpg';
 import allProducts from '../Products/allProducts';
 
 const Furniture = () => {
@@ -31,8 +32,10 @@ const Furniture = () => {
     { name: t('bristol'), path: '/furniture/bristol', image: BristolImage },
     { name: t('toronto'), path: '/furniture/toronto', image: TorontoImage },
     { name: t('keln'), path: '/furniture/keln', image: KelnImage },
-    { name: t('kelnOnLegs'), path: '/furniture/kelnOnLegs', image: KelnOnLegsImage }
+    { name: t('kelnOnLegs'), path: '/furniture/kelnOnLegs', image: KelnOnLegsImage },
+    { name: t('orlean'), path: '/furniture/orlean', image: OrleanImage }
   ];
+  
 
   const toggleFilter = () => {
     setIsFilterOpen(!isFilterOpen);

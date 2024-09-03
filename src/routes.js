@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, Link } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import Bed from './components/Bed/Bed';
 import Furniture from './components/Furniture/Furniture';
@@ -7,6 +7,7 @@ import Bristol from './components/Furniture/Bristol';
 import Toronto from './components/Furniture/Toronto';
 import Keln from './components/Furniture/Keln';
 import KelnOnLegs from './components/Furniture/KelnOnLegs';
+import Orlean from './components/Furniture/Orlean'; // Імпорт компонента Orlean
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import ScrollToTop from './ScrollToTop';
@@ -69,6 +70,15 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/furniture/orlean", // Додано маршрут для Orlean
+    element: (
+      <>
+        <ScrollToTop />
+        <Orlean />
+      </>
+    ),
+  },
+  {
     path: "/furniture",
     element: (
       <>
@@ -115,6 +125,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/kelnOnLegs/product/:productId",
+    element: (
+      <>
+        <ScrollToTop />
+        <ProductDetails />
+      </>
+    ),
+  },
+  {
+    path: "/orlean/product/:productId", // Додано маршрут для деталей продукту Orlean
     element: (
       <>
         <ScrollToTop />

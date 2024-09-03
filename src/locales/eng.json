@@ -38,6 +38,7 @@
   "toronto": "Toronto",
   "keln": "Keln",
   "kelnOnLegs": "Keln on Legs",
+  "orlean": "Orlean",
   "furnitureCollections": "Furniture Collections",
   "rating": "Review Rating",
   "reviewss": "Reviews",
@@ -87,7 +88,56 @@
   "footerAddress": "Address: Ternopil, Obolonya St., 49",
   "footerEmail": "Email: ramon.zakaz@gmail.com",
   "footerSocialTitle": "We are on Social Media",
-  "footerRights": "All Rights Reserved"
+  "footerRights": "All Rights Reserved",
+  
+  "products": {
+    "product1": {
+      "name": "Bed L-041",
+      "features": [
+        "Size: 1400 x 2000, 1600 x 2000, 1800 x 2000",
+        "Frame: Metal",
+        "Lift Mechanism: Pneumatic gas lift",
+        "Fabric/Texture: As per customer choice"
+      ]
+    },
+    "product2": {
+      "name": "Bed L-031",
+      "features": [
+        "Size: 1400 x 2000, 1600 x 2000, 1800 x 2000",
+        "Frame: Metal",
+        "Lift Mechanism: Pneumatic gas lift",
+        "Fabric/Texture: As per customer choice"
+      ]
+    },
+    "product3": {
+      "name": "Bed 'Lucy'",
+      "features": [
+        "Size: 1400 x 2000, 1600 x 2000, 1800 x 2000",
+        "Frame: Metal",
+        "Lift Mechanism: Pneumatic gas lift",
+        "Fabric/Texture: As per customer choice"
+      ]
+    },
+    "product4": {
+      "name": "Bed 'Monica'",
+      "features": [
+        "Size: 1400 x 2000, 1600 x 2000, 1800 x 2000",
+        "Frame: Metal",
+        "Lift Mechanism: Pneumatic gas lift",
+        "Fabric/Texture: As per customer choice"
+      ]
+    },
+    "product5": {
+      "name": "Bed L-029",
+      "features": [
+        "Size: 1400 x 2000, 1600 x 2000, 1800 x 2000",
+        "Frame: Metal",
+        "Lift Mechanism: Pneumatic gas lift",
+        "Fabric/Texture: As per customer choice"
+      ]
+    }
+    
+  }
 
 
 
